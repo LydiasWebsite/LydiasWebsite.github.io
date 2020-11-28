@@ -1,0 +1,92 @@
+extends layout/head
+block title
+	title SONEX – About
+block content
+	body#about-page
+		.global-outer
+			.global-inner
+				header#sidebar
+					.sidebar-inner
+						include layout/navigation
+						.widgets-block
+							include layout/widgets/twitter
+						include layout/copyright
+				main#main
+					.main-outer
+						.container-fluid
+							.page-title
+								.row
+									.col-md-8
+										h1 About
+										p.lead
+											| Lydia’s Gyurina’s (“jur-ee-na”) moving image and performance work deals with themes of awkwardness, disengagement, and the inherent narcissism of self-exploration. Through repetitive actions and uncomplicated editing, Lydia maintains an aesthetic of neutrality through simplicity, while investigating the difficult and complex. In her self-portraiture, Lydia seeks to foster empathy for the bizarre, awkward, and solipsistic. Through the use of the personal and specific, she seeks to re-integrate emotion and realness into the aloofness which often defines fine art spaces. 
+
+Lydia’s animations employ the same naive aesthetic of her video work, with a heavy focus on the hand-made. She has a special focus in stop motion, with work including fabricated puppet animation, and animations created using charcoal drawings. In two dimensions, she works frame-by frame in paper and index cards, or incorporates hand-drawn elements into digital outputs. In a series focusing on magical cell biology, culminating in the short film “Mitosis,” she investigates the depersonalization inherent in the disengagement of the person from their biological form. 
+
+The use of language in Lydia’s work is informed by her position as a poet. In line with her visual work, Lydia’s writing often uses detached, repetitive, yet legible language with the unreachable goal of creating a truly neutral expression and understanding of the self and reality. Much of her writing is non-narrative, instead using list-like forms as a means of “cataloging,” where realness feels flat, and profundity feels insurmountable. Lydia’s integration of language into her video and performance works often convolutes, rather than illustrates. In some places, the specificity of spoken language makes the abstract relevant and real. In other places, language complicates, leaving the viewer puzzled yet implicated.
+
+Lydia has worked as a production assistant, library assistant, and humanities researcher, and seeks to continue work in professional videography, post-production, or library and museum studies. Her work has been shown at the Anderson Gallery, Sediment Varve, and the Crenshaw House in Richmond, VA, as well as at the Moving Silently exhibition in Vallejo, CA. Lydia will graduate from Virginia Commonwealth University Honors College in the spring of 2020, with a BFA in Kinetic Imaging and a minor in Creative Writing. She currently resides between Richmond, VA and Boston, MA.
+									.col-md-12
+										.page-title-image
+											img(src='http://placehold.it/1000x465' alt='')
+							.studio
+								.row
+									.col-md-8
+										h2 The Studio
+										p.lead
+											| We have many years experience and many interesting problems which we solved. We are happy about collaboration with creative people and organizations to provide best design.
+										p
+											| Suspendisse pellentesque nisi dui, sodales consequat dolor ullamcorper non. Integer malesuada elit sapien, sed volutpat justo maximus non.
+							.services
+								.row
+									mixin service-block(title, para)
+										.col-md-3
+											.service-block
+												h4=title
+												p=para
+									+service-block('Animation', 'Phasellus maximus felis purus, eget maximus ligula scelerisque id.')
+									+service-block('Sculpture and Performance', 'Etiam risus metus, vehicula gravida elementum in, mollis ut ipsum.')
+									+service-block('Identity', 'Quisque vulputate orci in ipsum ultrices, vel volutpat quam sagittis.')
+									+service-block('Videos', 'Nullam sit amet libero id augue tincidunt pretium pharetra eu lorem.')
+							.approach
+								.row
+									.col-md-5
+										img(src='http://placehold.it/500x600' alt='')
+									.col-md-6.col-md-offset-1
+										.text
+											h2 Our Approach
+											p
+												| We believe that design it's a first thing the user sees. So, we care about true solutions and we will focus only on the client's problem. We love our clients and make them happy.
+											ul.links
+												li
+													a.smooth-leave(href='index.html') Our Cases
+												li
+													a.smooth-leave(href='contact.html') Contact Us
+							.team
+								.row
+									.col-md-12
+										.team-title
+											h2 The Team
+											p
+												| Meet talented team of creatives, fun-lovers, and magic makers.
+								mixin team-member(photo, name, post)
+									.col-md-4
+										.team-member
+											.photo
+												img(src=photo, alt='')
+											.content
+												h3=name
+												p=post
+												ul.social-links
+													each i in ['facebook', 'twitter', 'gplus']
+														li
+															a(class='icon-' + i, href='#')
+								.row
+									+team-member('http://placehold.it/400x400', 'Lydia Gyurina', 'Visual Artist')
+									+team-member('http://placehold.it/400x400', 'Helen Clark', 'Lead Designer')
+									+team-member('http://placehold.it/400x400', 'Robert Briggs', 'Senior Designer')
+								.row
+									+team-member('http://placehold.it/400x400', 'Maria Burton', 'Brand & UI Designer')
+									+team-member('http://placehold.it/400x400', 'Daniel Frates', 'UX/UI Strategist')
+									+team-member('http://placehold.it/400x400', 'Dawm Williams', 'Office Manager')
+		include layout/js

@@ -1,0 +1,48 @@
+extends layout/head
+block title
+	title SONEX – Home
+block content
+	body#index-page
+		.global-outer
+			.global-inner
+				header#sidebar
+					.sidebar-inner
+						include layout/navigation
+						.widgets-block
+							include layout/widgets/works-filter
+						include layout/copyright
+				main#main
+					.main-outer
+						.container-fluid
+							.row
+								.col-md-12
+									#works-grid.columns-2
+										.gutter
+										mixin works-item(title, categories, list, img)
+											a(class='works-item smooth-leave ' + categories, href='project-page.html')
+												.picture
+													.content
+														.text
+															h2=title
+															ul
+																each val in list
+																	li=val
+													img(src=img, alt='')
+										+works-item('Mutualismi', 'Animation Video', ['Animation', 'Video'], 'http://placehold.it/500x500')
+										+works-item('Genuine American Fortune Cookies', 'Sculpture and Performance', ['Sculpture and Performance'], 'http://placehold.it/500x500')
+										+works-item('Moth Magazine', 'Animation Sculpture and Performance', ['Animation', 'Sculpture and Performance'], 'http://placehold.it/500x500')
+										+works-item("Steve Gyurina Photography & Artopia Giclée Brand Video", 'Video', ['Video'], 'http://placehold.it/500x600')
+										+works-item("Stepstool Manifesto", 'Sculpture and Performance', ['Sculpture and Performance'], 'http://placehold.it/500x500')
+										+works-item('Rent the Runway New Packaging', 'Sculpture and Performance', ['Sculpture and Performance'], 'http://placehold.it/500x600')
+										+works-item('勾勾 GOGO', 'Animation', ['Animation'], 'http://placehold.it/500x500')
+										+works-item('London', 'Video Animation', ['Video', 'Animation'], 'http://placehold.it/500x700')
+										+works-item('Fika', 'Sculpture and Performance', ['Sculpture and Performance'], 'http://placehold.it/500x500')
+										+works-item('Hana', 'Sculpture and Performance', ['Sculpture and Performance'], 'http://placehold.it/500x500')
+										+works-item('Sculpture and Performance Miss Events', 'Video Sculpture and Performance', ['Video', 'Sculpture and Performance'], 'http://placehold.it/500x600')
+										+works-item('Viliv Identity', 'Animation Video', ['Animation', 'Video'], 'http://placehold.it/500x500')
+										+works-item('Stay Hungry Stay Foolish', 'Animation', ['Animation'], 'http://placehold.it/500x500')
+								.row
+									.col-md-12
+										.load-more
+											a.btn(href='#') Load More Projects
+		include layout/js
