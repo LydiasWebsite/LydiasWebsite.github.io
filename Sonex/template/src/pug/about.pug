@@ -66,9 +66,9 @@ Lydia has worked as a production assistant, library assistant, and humanities re
 								.row
 									.col-md-12
 										.team-title
-											
-											
-											
+											h2 The Team
+											p 
+												| Meet talented team of creatives, fun-lovers, and magic makers.
 								mixin team-member(photo, name, post)
 									.col-md-4
 										.team-member
@@ -83,5 +83,10 @@ Lydia has worked as a production assistant, library assistant, and humanities re
 															a(class='icon-' + i, href='#')
 								.row
 									+team-member('http://placehold.it/400x400', 'Lydia Gyurina', 'Visual Artist')
-									
+									+team-member('http://placehold.it/400x400', 'Helen Clark', 'Lead Designer')
+									+team-member('http://placehold.it/400x400', 'Robert Briggs', 'Senior Designer')
+								.row
+									+team-member('http://placehold.it/400x400', 'Maria Burton', 'Brand & UI Designer')
+									+team-member('http://placehold.it/400x400', 'Daniel Frates', 'UX/UI Strategist')
+									+team-member('http://placehold.it/400x400', 'Dawm Williams', 'Office Manager')
 		include layout/js
